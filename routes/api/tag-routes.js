@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
-// The `/api/tags` endpoint
+// find/display all tags with associated product data
 
 router.get('/', async (req, res) => {
   try {
@@ -13,9 +13,8 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-  // find all tags
-  // be sure to include its associated Product data
 
+// find/display tag by id with associated product data
 
 router.get('/:id', async (req, res) => {
   try {
@@ -31,8 +30,8 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
+
+// create new tag
 
 router.post('/', async (req, res) => {
   try {
@@ -42,8 +41,8 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-  // create a new tag
 
+// update tag by id
 
 router.put('/:id', async (req, res) => {
   try {
@@ -55,8 +54,8 @@ router.put('/:id', async (req, res) => {
     res.status(400).json(err);
   }
 });
-  // update a tag's name by its `id` value
 
+// delete tag by id
 
 router.delete('/:id', async (req, res) => {
   try {
@@ -74,6 +73,5 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-  // delete on tag by its `id` value
 
 module.exports = router;

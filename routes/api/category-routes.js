@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Category, Product } = require("../../models");
 
-// The `/api/categories` endpoint
+// display/find all categories w/ associated products
 
 router.get("/", async (req, res) => {
   try {
@@ -13,8 +13,8 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-// find all categories
-// be sure to include its associated Products
+
+// display/find category by id w/ associated products
 
 router.get("/:id", async (req, res) => {
   try {
@@ -30,8 +30,8 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-// find one category by its `id` value
-// be sure to include its associated Products
+
+// create category
 
 router.post("/", async (req, res) => {
   try {
@@ -41,7 +41,8 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
-// create a new category
+
+// update category by id
 
 router.put("/:id", async (req, res) => {
   try {
@@ -52,8 +53,9 @@ router.put("/:id", async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-}); // update a category by its `id` value
-// RETURNING ARRAY ONLY SHOWING 1**********************************************************
+}); 
+
+// delete category by id
 
 router.delete("/:id", async (req, res) => {
   try {
@@ -70,8 +72,6 @@ router.delete("/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-  // delete a category by its `id` value
 });
-// RETURNING ARRAY ONLY SHOWING 1**********************************************************
 
 module.exports = router;
