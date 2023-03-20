@@ -17,6 +17,8 @@ Used [insomniac](https://insomnia.rest/) for calls.
 ## Usage
 First using the schema in the db folder create the database on your MYSQL server, afterwards run npm run seed and npm start in your console, then you can use [insomnia](https://insomnia.rest/) to run gets, posts, puts, and deletes. <br>
 [Here is a video demonstrating the functionality](https://watch.screencastify.com/v/lPErzMjJdsEi7ORPY3UN) <br>
+Here is a screenshot of the command line and insomnia.
+![image](https://user-images.githubusercontent.com/123116188/226477955-df4aa7b1-73b5-4a2c-aa8d-e780bd32e88f.png)
 
 Here is a screenshot of the application.
 ## Contributing
