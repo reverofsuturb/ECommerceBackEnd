@@ -1,7 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
+// product model identifying id as primary key, reference to category.id under category_id
+
 class Product extends Model {}
 
 Product.init(
