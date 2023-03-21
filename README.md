@@ -1,4 +1,4 @@
-# ECommerceBackEnd
+# InventoryWizard
 ![MIT](https://img.shields.io/badge/license-MIT-green)
 ## Table of Contents
 - [Description](#description)
